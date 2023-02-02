@@ -2,11 +2,13 @@
 
 knowledge $\gets$ $\lbrace ^{ R \\ + \\ \bar{R} \\ + \\ \sum_{} \vec{Q} \\ + \\ \sum_{} \vec{\pi} \\ + \\ \sum_{} \vec{W} \\ + \\ (ANY \\ Knowledge \\ available \\ to \\ agent), \\ global \\ knowledge} _{R \\ + \\ \bar{R} \\ + \\ \max Q(s',a) \\ + \\ Q(s,a) \\ + \\ \pi(a|s) \\ + \\ W(s) \\ + \\ (ANY \\ Local \\ Knowledge \\ available \\ to \\ agent), \\ local \\ knowledge}$ <br>
 <br>
-Ego $\gets$ $\lbrace ^{ \frac{1}{knowledge}, \\ knolwedge \\ > \\ 0} _{1, \\ otherwise}$ <br>
+Ego $\gets$ $\lbrace ^{ \frac{1}{knowledge}, \\ knolwedge \\ > \\ 0} _{\alpha, \\ otherwise}$ <br>
 <br>
 Ego $\gets$ $\lbrace ^{ Ego * reward, \\ goal \\ explicit} _{Ego, \\ goal \\ implicit}$ <br>
 <br>
 $\delta \gets Ego*[R + \\ \gamma Q(s', a) \\ - \\ Q(s, a)]$<br>
+<br>
+$\alpha \gets Ego$<br>
 
 The ego postulate was proposed by Einstein and says that ego is inversely proportional to knowledge, $\frac{1}{knowledge}$. The ego equation presented can be used as a learning rate in reinforcement learning algorithms. The concept of ego in the equation represents the self-confidence or self-importance of an agent in making decisions in a particular state. The ego value is calculated based on the agent's knowledge, which includes the rewards, the Q-values, the policy, and any other relevant information.
 
