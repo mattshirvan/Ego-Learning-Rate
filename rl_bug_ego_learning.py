@@ -260,6 +260,9 @@ def Q_learning_Ego(episodes, start, goal, epsilon, alpha = 0.5) -> tuple:
 
             # S <-- S'
             S = S_prime
+            
+            # Store last ego as a constant step-Size
+            alpha = Ego
 
     # Output Q estimate of q*
     return Q, policy
